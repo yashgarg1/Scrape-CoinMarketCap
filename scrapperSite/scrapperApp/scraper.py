@@ -1,9 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
 
-def scrape_coinmarketcap():
+def scrape_coinmarketcap(url):
     # Make a request to the coinmarketcap website.
-    response = requests.get("https://coinmarketcap.com/")
+    response = requests.get(url)
 
     # Parse the response as HTML.
     soup = BeautifulSoup(response.content, "html.parser")
