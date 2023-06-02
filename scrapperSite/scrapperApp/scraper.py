@@ -10,12 +10,10 @@ def scrape_coinmarketcap(url):
 
     # Find the table of cryptocurrency data.
     table = soup.find("table", class_="cmc-table")
-
     # Get the data from the table.
     data = {"data": []}
-    for row in table.find_all("tr"):
+    for row in table.find_all("tr", limit=None):
         cells = row.find_all("td")
-        # TODO: correct the order of these cells to get correct data
         data["data"].append({
             "name": cells[2].text if len(cells) > 2 else "",
             "price": cells[3].text if len(cells) > 3 else "",
@@ -26,7 +24,6 @@ def scrape_coinmarketcap(url):
             "volume(24h)": cells[8].text if len(cells) > 8 else "",
             "circulating_supply": cells[9].text if len(cells) > 9 else ""
         })
-    print(data["data"][1])
     return data
 
 
@@ -38,11 +35,9 @@ def send_data(data, url):
 
 
 def update_values():
-    """
-    The main function.
-    """
     url = "https://coinmarketcap.com/"
     post_url = "http://127.0.0.1:8000/app/update_data/"
   
     data = scrape_coinmarketcap(url)
     send_data(data, post_url)
+

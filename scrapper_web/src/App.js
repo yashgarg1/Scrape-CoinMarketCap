@@ -73,5 +73,3 @@ class CryptocurrencyTable extends Component {
 }
 
 export default App;
-
-// export default CryptocurrencyTable;
