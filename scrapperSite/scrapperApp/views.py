@@ -45,7 +45,7 @@ def update_data(request):
             "volume_24h": row["volume(24h)"],
             "circulating_supply": row["circulating_supply"],
         })
-        print(cryptocurrency, created)
+        # print(cryptocurrency, created)
 
     return HttpResponse("Data updated successfully.")
 

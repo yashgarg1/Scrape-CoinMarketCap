@@ -25,14 +25,14 @@ class CryptocurrencyTable extends Component {
     }
 
     componentDidMount() {
-      // setInterval(() => {
+      setInterval(() => {
         axios.get("http://127.0.0.1:8000/app/get_data").then((response) => {
             this.setState({
                 cryptocurrencyData: JSON.parse(response.data),
             });
-            // console.log(JSON.parse(response.data))
+            console.log(JSON.parse(response.data))
         });
-      // }, );
+      }, 3000);
     }
     
     

@@ -38,7 +38,7 @@ def send_data(data, url):
     requests.post(url, json=data, headers=headers)
 
 
-def abc():
+def update_values():
     """
     The main function.
     """
@@ -46,8 +46,5 @@ def abc():
     url = "https://coinmarketcap.com/"
     post_url = "http://127.0.0.1:8000/app/update_data/"
   
-    # Send the data to the Django/Flask backend every 5 seconds.
-    while True:
-        data = scrape_coinmarketcap(url)
-        send_data(data, post_url)
-        time.sleep(5)
+    data = scrape_coinmarketcap(url)
+    send_data(data, post_url)
