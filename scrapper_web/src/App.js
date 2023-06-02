@@ -5,6 +5,7 @@ import axios from "axios";
 function App() {
 
   return (
+    
     <div className="App">
       <CryptocurrencyTable />
     </div>
@@ -38,16 +39,16 @@ class CryptocurrencyTable extends Component {
     render() {
       // console.log(this.state.cryptocurrencyData)
         return (
-            <table>
+            <table class="styled-table">
                 <thead>
                     <tr>
                         <th>Name</th>
                         <th>Price</th>
-                        <th>one_h_percent</th>
-                        <th>twenty_four_h_percent</th>
-                        <th>seven_d_percent</th>
+                        <th>1h%</th>
+                        <th>24h%</th>
+                        <th>7d%</th>
                         <th>Market Cap</th>
-                        <th>volume_24h</th>
+                        <th>volume(24h)</th>
                         <th>Circulating Supply</th>
                     </tr>
                 </thead>
