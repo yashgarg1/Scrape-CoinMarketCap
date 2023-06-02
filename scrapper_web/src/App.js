@@ -13,8 +13,6 @@ function App() {
 }
 
 
-
-
 class CryptocurrencyTable extends Component {
     constructor(props) {
         super(props);
@@ -37,38 +35,39 @@ class CryptocurrencyTable extends Component {
     
     
     render() {
-      // console.log(this.state.cryptocurrencyData)
         return (
-            <table class="styled-table">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Price</th>
-                        <th>1h%</th>
-                        <th>24h%</th>
-                        <th>7d%</th>
-                        <th>Market Cap</th>
-                        <th>volume(24h)</th>
-                        <th>Circulating Supply</th>
-                    </tr>
-                </thead>
-                <tbody style ={{height: '100px'}}>
-                    {this.state.cryptocurrencyData.map((cryptocurrency) => {  
-                      console.log(cryptocurrency.fields)
-                      return (
-                        <tr style ={{color: 'black'}} key={cryptocurrency.fields.name}>
-                            <td>{cryptocurrency.fields.name}</td>
-                            <td>{cryptocurrency.fields.price}</td>
-                            <td>{cryptocurrency.fields.one_h_percent}</td>
-                            <td>{cryptocurrency.fields.twentyFour_h_percent}</td>
-                            <td>{cryptocurrency.fields.seven_d_percent}</td>
-                            <td>{cryptocurrency.fields.market_cap}</td>
-                            <td>{cryptocurrency.fields.volume_24h}</td>
-                            <td>{cryptocurrency.fields.circulating_supply}</td>
+            <div class = "container">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>1h%</th>
+                            <th>24h%</th>
+                            <th>7d%</th>
+                            <th>Market Cap</th>
+                            <th>volume(24h)</th>
+                            <th>Circulating Supply</th>
                         </tr>
-                    )})}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody style ={{height: '100px'}}>
+                        {this.state.cryptocurrencyData.map((cryptocurrency) => {  
+                        return (
+                            <tr style ={{color: 'black'}} key={cryptocurrency.fields.name}>
+                                <td>{cryptocurrency.fields.name}</td>
+                                <td>{cryptocurrency.fields.price}</td>
+                                <td>{cryptocurrency.fields.one_h_percent}</td>
+                                <td>{cryptocurrency.fields.twentyFour_h_percent}</td>
+                                <td>{cryptocurrency.fields.seven_d_percent}</td>
+                                <td>{cryptocurrency.fields.market_cap}</td>
+                                <td>{cryptocurrency.fields.volume_24h}</td>
+                                <td>{cryptocurrency.fields.circulating_supply}</td>
+                            </tr>
+                        )})}
+                    </tbody>
+                </table>
+            </div>
+            
         );
     }
 }
