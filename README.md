@@ -10,22 +10,22 @@ React frontend to display the data in a tabular format.
 Automatic data refresh every 3 seconds.
 
 # Technologies Used
-Python
-Django
-MySQL
-React
-JavaScript
+Python,
+Django,
+MySQL,
+React,
+JavaScript,
 HTML/CSS
 
 # Some Useful Commands
-django-admin startproject scrapperSite
-cd ./scrapperSite/
-python3 ./manage.py startapp scrapperApp
-python3 ./manage.py migrate
-python3 ./manage.py runserver
+django-admin startproject scrapperSite,
+cd ./scrapperSite/,
+python3 ./manage.py startapp scrapperApp,
+python3 ./manage.py migrate,
+python3 ./manage.py runserver,
 
 for migration
-python3 ./manage.py makemigrations 
-python3 ./manage.py migrate
+python3 ./manage.py makemigrations,
+python3 ./manage.py migrate,
 
 Used basic run commands for creating ract app and running it using npm start
