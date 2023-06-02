@@ -29,3 +29,5 @@ python3 ./manage.py makemigrations,
 python3 ./manage.py migrate,
 
 Used basic run commands for creating ract app and running it using npm start
+
+Project Doc - https://docs.google.com/document/d/1GJFDcqAGq4XaKlfGTpIAvZtKcybGToQ0BcuiqtguEoY/edit?usp=sharing
